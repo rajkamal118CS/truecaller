@@ -66,7 +66,7 @@ session_start();
 
 
 							$sql = "INSERT INTO spam_database (spam_no, spam_name, user, type,count) 
-							VALUES ('$spamnumber', '$spamname','$user','$type','$count')";
+							VALUES ('$spamnumber', '$spamname','$user','$type','$count') ON DUPLICATE KEY UPDATE count=count+1 ";
 
 
 							if ($conn->query($sql) === TRUE) {
