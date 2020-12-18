@@ -19,7 +19,7 @@ session_start();
 		$usernumber = filter_input(INPUT_GET,'adminnumber');
 		$userpass = filter_input(INPUT_GET,'userpass');
 		
-		if($usernumber=="admin111" && $userpass=="password123")
+		if($usernumber=="raj" && $userpass=="kamal")
 		{
             $_SESSION["userid"] = $userid;
             header("Location: dashboard.php");
