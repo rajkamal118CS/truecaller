@@ -74,8 +74,41 @@ session_start();
                   if(mysqli_num_rows($ret)==0)
                   {
                       echo "<div id='card'><h1>No Contact are thier to view....</h1><form action='admin_home.php'><button type='submit' id='done'>Done</button></form></div>";
+
+
 		
                   }?>
+<div class="mt-2">
+                    <div class="text-center p-3">
+                        <h3 class="theme-color">
+                          
+                        Spam number reported by user 
+
+                      </h3>
+                    </div>
+                </div>
+                 <?php
+                  $sql="SELECT * FROM spam_database where user='$usernumber'";
+                  $ret=mysqli_query($conn,$sql);
+                  if(mysqli_num_rows($ret)>0)
+                  {
+                    
+                    echo"<table class='table table-striped'><thead><tr><th scope='col'>Contact Number</th><th scope='col'>Contact Name</th><th scope='col'>User</th><th scope='col'>Type</th><th scope='col'>count</th></tr></thead><tbody>";
+                
+                    while($row=mysqli_fetch_assoc($ret))
+                    {
+                      echo"<tr><th scope='row'>{$row['spam_no']}</th><td>{$row['spam_name']}</td><td>{$row['user']}</td><td>{$row['type']}</td><td>{$row['count']}</td></tr>";
+                    }
+            
+                  echo"</tbody></table>";
+                     
+                  echo"<form action='dashboard.php'><button class='btn bg-light' type='submit'>Go Back</button></form>";
+                  echo"</div>";
+                  }
+                  if(mysqli_num_rows($ret)==0)
+                  {
+                      echo "<div id='card'><h1>No Contact are thier to view....</h1><form action='admin_home.php'><button type='submit' id='done'>Done</button></form></div>";
+                    }?>
                 
           </div>
         </div>

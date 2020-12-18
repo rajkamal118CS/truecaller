@@ -37,7 +37,7 @@ session_start();
                 
                 <form action="view-contact.php" method="get">
                   <div class="input-group md-form form-md form-2 pl-0">
-                    <input class="form-control my-0 py-1" name="query" type="text" placeholder="Enter ur number to view local contact" aria-label="Search">
+                    <input class="form-control my-0 py-1" name="query" type="text" placeholder="Enter ur number to view ur local contact List" aria-label="Search">
                     <div class="input-group-append">
                       <button class="btn">
                       <span class="input-group-text search-btn" id="basic-text1"><i class="fas fa-search search-icon"
@@ -47,6 +47,8 @@ session_start();
                     </div>
                   </form>
             </div>
+          </div>
+            <div class="row my-4">
             <div class="col-sm">
                 <button class="btn btn-block action-btn p-3" onclick="location.href='view_contact_all.php'">
                     <i class="fas fa-stream pr-3"></i> View All Contact
@@ -56,7 +58,9 @@ session_start();
                 <button class="btn btn-block action-btn p-3" onclick="location.href='view_spam.php'">
                     <i class="fas fa-stream pr-3"></i> View Spam contacts
                 </button>
+
             </div>
+          </div>
           </div>
           
         

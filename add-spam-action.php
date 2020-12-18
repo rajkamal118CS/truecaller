@@ -46,8 +46,8 @@ session_start();
 							$sql = "CREATE TABLE IF NOT EXISTS spam_database (
 								spam_no VARCHAR(50) PRIMARY KEY,
 								spam_name VARCHAR(50), 
-								type VARCHAR(50),
 								user VARCHAR(50),
+								type VARCHAR(50),
 								count INT
 							)";
 
@@ -65,8 +65,8 @@ session_start();
 							
 
 
-							$sql = "INSERT INTO spam_database (spam_no, spam_name, type, user,count) 
-							VALUES ('$spamnumber', '$spamname','$type','$user','$count')";
+							$sql = "INSERT INTO spam_database (spam_no, spam_name, user, type,count) 
+							VALUES ('$spamnumber', '$spamname','$user','$type','$count')";
 
 
 							if ($conn->query($sql) === TRUE) {

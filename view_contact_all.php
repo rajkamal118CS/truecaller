@@ -53,17 +53,17 @@ session_start();
 			              die("Connection failed: " . $conn->connect_error);
 		              } 
 
-                  $sql='SELECT * FROM contact_database
-                  UNION ALL SELECT * FROM spam_database';
+                  $sql='SELECT c.contact_number,c.contact_name,c.pin,a.city,a.state,a.country,ad.user_email,ad.user_dob,ad.user_gender FROM contact_database c,admin_database ad,address_database a where
+                  c.contact_number=ad.user_number and c.pin=a.pin';
                   $ret=mysqli_query($conn,$sql);
                   if(mysqli_num_rows($ret)>0)
                   {
 					          
-                    echo"<table class='table table-striped'><thead><tr><th scope='col'>Book ID</th><th scope='col'>Book Name</th><th scope='col'>Author</th><th scope='col'>Publisher</th><th scope='col'>Number of Copies</th></tr></thead><tbody>";
+                    echo"<table class='table table-striped'><thead><tr><th scope='col'>Phone Number</th><th scope='col'>Name</th><th scope='col'>Pin</th><th scope='col'>city</th><th scope='col'>state</th><th scope='col'>Country</th><th scope='col'>email</th><th scope='col'>DOB</th><th scope='col'>Gender</th></tr></thead><tbody>";
                 
 					          while($row=mysqli_fetch_assoc($ret))
 					          {
-						          echo"<tr><th scope='row'>{$row['contact_number']}</th><td>{$row['contact_name']}</td><td>{$row['user']}</td><td>{$row['type']}</td><td>{$row['pin']}</td></tr>";
+						          echo"<tr><th scope='row'>{$row['contact_number']}</th><td>{$row['contact_name']}</td><td>{$row['pin']}</td><td>{$row['city']}</td><td>{$row['state']}</td><td>{$row['country']}</td><td>{$row['user_email']}</td><td>{$row['user_dob']}</td><td>{$row['user_gender']}</td></tr>";
 					          }
             
 			            echo"</tbody></table>";
