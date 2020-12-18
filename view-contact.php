@@ -52,8 +52,9 @@ session_start();
 		              if ($conn->connect_error) {
 			              die("Connection failed: " . $conn->connect_error);
 		              } 
+                  $usernumber = filter_input(INPUT_GET,'query');
 
-                  $sql='SELECT * FROM contact_database';
+                  $sql="SELECT * FROM contact_database where user='$usernumber'";
                   $ret=mysqli_query($conn,$sql);
                   if(mysqli_num_rows($ret)>0)
                   {

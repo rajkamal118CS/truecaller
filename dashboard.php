@@ -42,21 +42,7 @@ session_start();
                     <i class="fas fa-search pr-3"></i> Search
                 </button>
             </div>
-            <div class="col-sm">
-                <button class="btn btn-block action-btn p-3" onclick="location.href='view-contact.php'">
-                    <i class="fas fa-stream pr-3"></i> View Local Contact
-                </button>
-            </div>
-            <div class="col-sm">
-                <button class="btn btn-block action-btn p-3" onclick="location.href='view_contact_all.php'">
-                    <i class="fas fa-stream pr-3"></i> View All Contact
-                </button>
-            </div>
-            <div class="col-sm">
-                <button class="btn btn-block action-btn p-3" onclick="location.href='view_spam.php'">
-                    <i class="fas fa-stream pr-3"></i> View Spam contacts
-                </button>
-            </div>
+           
           </div>
           <div class="row my-4">
           <div class="col-sm">
@@ -79,6 +65,13 @@ session_start();
             <div class="col-sm">
               <button class="btn btn-block action-btn p-3" onclick="location.href='view_address.php'">
                 <i class="fas fa-book pr-3"></i> View Addresss
+              </button>
+            </div>
+          </div>
+          <div class="row my-4">
+            <div class="col-sm">
+              <button class="btn btn-block action-btn p-3" onclick="location.href='view_main.php'">
+                <i class="fas fa-book pr-3"></i> View Contacts.
               </button>
             </div>
           </div>
