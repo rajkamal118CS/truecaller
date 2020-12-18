@@ -78,7 +78,7 @@ session_start();
 							$count=$count+1;
 							$sql = "INSERT INTO spam_database (count) 
 							VALUES ('$count') where spam_no='$spamnumber' ";
-								echo "<h3 class='text-center m-4'>spam number Already Taken!!! and increased</h3><form action='add-books.php'><button class='btn btn-block login-btn' type='submit'>OK</button></form>";
+								echo "<h3 class='text-center m-4'>spam number Already Taken!!! and increased</h3><form action='add-contact.php'><button class='btn btn-block login-btn' type='submit'>OK</button></form>";
 							}
 
 							$conn->close();

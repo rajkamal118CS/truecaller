@@ -38,7 +38,7 @@ session_start();
                 </bu-tton>
               </div>
               <div class="col-sm">
-                <button class="btn btn-block action-btn p-3" onclick="location.href='search-books.php'">
+                <button class="btn btn-block action-btn p-3" onclick="location.href='search-contact.php'">
                     <i class="fas fa-search pr-3"></i> Search
                 </button>
             </div>

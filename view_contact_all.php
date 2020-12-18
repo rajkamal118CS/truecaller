@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Books</title>
+    <title>view contact</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css" >
@@ -73,7 +73,7 @@ session_start();
                   }
                   if(mysqli_num_rows($ret)==0)
                   {
-                      echo "<div id='card'><h1>No Books are thier to view....</h1><form action='admin_home.php'><button type='submit' id='done'>Done</button></form></div>";
+                      echo "<div id='card'><h1>No contacts are thier to view....</h1><form action='admin_home.php'><button type='submit' id='done'>Done</button></form></div>";
 		
                   }?>
                 
