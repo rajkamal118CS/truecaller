@@ -43,12 +43,12 @@ session_start();
 								die("Connection failed: " . $conn->connect_error);
 							} 
 							
-							$sql = "CREATE TABLE IF NOT EXISTS book_database (
-								book_id VARCHAR(50) PRIMARY KEY,
-								book_name VARCHAR(50), 
-								aut_name VARCHAR(50),
-								pub VARCHAR(50),
-								qty INT(11)
+							$sql = "CREATE TABLE IF NOT EXISTS contact_database (
+								contact_number VARCHAR(50) PRIMARY KEY,
+								contact_name VARCHAR(50), 
+								user VARCHAR(50),
+								type VARCHAR(50),
+								pin INT(11)
 							)";
 
 							if ($conn->query($sql) === TRUE) {
@@ -59,23 +59,23 @@ session_start();
 							
 							$cnumber = filter_input(INPUT_GET,'cnumber');
 							$cname = filter_input(INPUT_GET,'cname');
-							$userinfo = filter_input(INPUT_GET,'userinfo');
-							$pub = filter_input(INPUT_GET,'pub');
-							$qty = filter_input(INPUT_GET,'qty');
-							$userid = filter_input(INPUT_GET,'userid');
+							$user = filter_input(INPUT_GET,'user');
+							$type = filter_input(INPUT_GET,'type');
+							$pin = filter_input(INPUT_GET,'pin');
+							
 
 
-							$sql = "INSERT INTO book_database (book_id, book_name, aut_name, pub,qty) 
-							VALUES ('$cnumber', '$cname','$relation','$pub','$qty')";
+							$sql = "INSERT INTO contact_database (contact_number, contact_name, user, type,pin) 
+							VALUES ('$cnumber', '$cname','$user','$type','$pin')";
 
 
 							if ($conn->query($sql) === TRUE) {
 							//echo "New record created successfully";
-							echo "<h3 class='text-center m-4'>New Book Added successfully</h3><form action='dashboard.php'><button class='btn btn-block login-btn' type='submit'>OK</button></form>";
+							echo "<h3 class='text-center m-4'>New Local Contact Added successfully</h3><form action='dashboard.php'><button class='btn btn-block login-btn' type='submit'>OK</button></form>";
 							
 							
 							} else {
-								echo "<h3 class='text-center m-4'>Book ID Already Taken!!!</h3><form action='add-books.php'><button class='btn btn-block login-btn' type='submit'>OK</button></form>";
+								echo "<h3 class='text-center m-4'>Local Contact Already exist</h3><form action='add-contact.php'><button class='btn btn-block login-btn' type='submit'>OK</button></form>";
 							}
 
 							$conn->close();

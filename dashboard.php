@@ -33,7 +33,7 @@ session_start();
       <div class="container">
           <div class="row my-4">
               <div class="col-sm">
-                <button class="btn btn-block action-btn p-3" onclick="location.href='add-books.php'">
+                <button class="btn btn-block action-btn p-3" onclick="location.href='add-contact.php'">
                     <i class="far fa-plus-square pr-3"></i> Add Local contact
                 </bu-tton>
               </div>
@@ -43,7 +43,7 @@ session_start();
                 </button>
             </div>
             <div class="col-sm">
-                <button class="btn btn-block action-btn p-3" onclick="location.href='view-books.php'">
+                <button class="btn btn-block action-btn p-3" onclick="location.href='view-contact.php'">
                     <i class="fas fa-stream pr-3"></i> View Local Contact
                 </button>
             </div>

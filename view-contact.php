@@ -36,7 +36,7 @@ session_start();
 
                 <div class="mt-2">
                     <div class="text-center p-3">
-                        <h3 class="theme-color">All Contact</h3>
+                        <h3 class="theme-color">Local Contact</h3>
                     </div>
                 </div>
 
@@ -53,17 +53,16 @@ session_start();
 			              die("Connection failed: " . $conn->connect_error);
 		              } 
 
-                  $sql='SELECT * FROM book_database
-                  UNION ALL SELECT * FROM spam_database';
+                  $sql='SELECT * FROM contact_database';
                   $ret=mysqli_query($conn,$sql);
                   if(mysqli_num_rows($ret)>0)
                   {
 					          
-                    echo"<table class='table table-striped'><thead><tr><th scope='col'>Book ID</th><th scope='col'>Book Name</th><th scope='col'>Author</th><th scope='col'>Publisher</th><th scope='col'>Number of Copies</th></tr></thead><tbody>";
+                    echo"<table class='table table-striped'><thead><tr><th scope='col'>Contact Number</th><th scope='col'>Contact Name</th><th scope='col'>User</th><th scope='col'>Type</th><th scope='col'>pin</th></tr></thead><tbody>";
                 
 					          while($row=mysqli_fetch_assoc($ret))
 					          {
-						          echo"<tr><th scope='row'>{$row['book_id']}</th><td>{$row['book_name']}</td><td>{$row['aut_name']}</td><td>{$row['pub']}</td><td>{$row['qty']}</td></tr>";
+						          echo"<tr><th scope='row'>{$row['contact_number']}</th><td>{$row['contact_name']}</td><td>{$row['user']}</td><td>{$row['type']}</td><td>{$row['pin']}</td></tr>";
 					          }
             
 			            echo"</tbody></table>";
@@ -73,7 +72,7 @@ session_start();
                   }
                   if(mysqli_num_rows($ret)==0)
                   {
-                      echo "<div id='card'><h1>No Books are thier to view....</h1><form action='admin_home.php'><button type='submit' id='done'>Done</button></form></div>";
+                      echo "<div id='card'><h1>No Contact are thier to view....</h1><form action='admin_home.php'><button type='submit' id='done'>Done</button></form></div>";
 		
                   }?>
                 

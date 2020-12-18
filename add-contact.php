@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Books</title>
+    <title>Add Contact</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css" >
@@ -38,9 +38,9 @@ session_start();
 
                 <div class="shadow-lg bg-white mt-4">
                     <div class="col form-header text-center p-3">
-                        Add Books
+                        Add Contact
                     </div>
-                    <form action="add-books-action.php" method="get">
+                    <form action="add-contact-action.php" method="get">
                         <div class="form-group mx-4 mt-4">
                             <input type="text" required name=cname class="form-control" placeholder="Contact Name">
                         </div>
@@ -48,15 +48,15 @@ session_start();
                             <input type="text" required name="cnumber" class="form-control" placeholder="Contact Number">
                         </div>
                         <div class="form-group mx-4 mt-4">
-                            <input type="text" required name="userinfo" class="form-control" placeholder="User id" value="$userid">
+                            <input type="text" required name="user" class="form-control" placeholder="User id">
                         </div>
                         <div class="form-group mx-4 mt-4">
-                            <input type="text" required name="pub" class="form-control" placeholder="Publisher">
+                            <input type="text" required name="type" class="form-control" placeholder="Type" value=Person>
                         </div>
                         <div class="form-group mx-4 mt-4">
-                            <input type="number" required name="qty" class="form-control" placeholder="Quantity">
+                            <input type="number" required name="pin" class="form-control" placeholder="Area-Pin">
                         </div>
-                        <button type="submit" class="btn login-btn btn-block my-4">Add Books</button>
+                        <button type="submit" class="btn login-btn btn-block my-4">Add Contact</button>
                     </form>
                 </div>
                 
