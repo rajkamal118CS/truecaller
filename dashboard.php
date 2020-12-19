@@ -75,6 +75,13 @@ session_start();
               </button>
             </div>
           </div>
+          <div class="row my-4">
+            <div class="col-sm">
+              <button class="btn btn-block action-btn p-3" onclick="location.href='search.php'">
+                <i class="fas fa-book pr-3"></i> Search Contact
+              </button>
+            </div>
+          </div>
       </div>
       
 </body>
