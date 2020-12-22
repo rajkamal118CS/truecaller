@@ -16,12 +16,28 @@ session_start();
 </head>
 <body>
 <?php
-        if($_SESSION["userid"] === ""){
-          echo $_SESSION['userid'];
-          echo "login";
-          header("Location: index.php ");
+        
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+
+        // Create connection
+        $conn = new mysqli($servername, $username, $password);
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        } 
+
+        // Create database
+        $sql = "CREATE DATABASE IF NOT EXISTS librarydb";
+        if ($conn->query($sql) === TRUE) {
+            //echo "Database created successfully";
+            
+        
+        
+        $conn->close();
         }
-      ?>
+        ?>
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
         <a class="navbar-brand my-0 mr-md-auto" href="dashboard.php">
             <img src="images/simplelogo-dark.svg" alt="logo" width="130" height="30" alt="Logo" loading="lazy">
@@ -43,24 +59,37 @@ session_start();
                     </div>
                     <form action="add-admin-action.php" method="get">
                         <div class="form-group mx-4 mt-4">
+                            Full Name:
                             <input type="text" required name="adminName" class="form-control" placeholder="Name">
                         </div>
                         <div class="form-group mx-4 mt-4">
+                            Contact Number:
                             <input type="text" required name="adminnumber" class="form-control" placeholder="contact Number">
                         </div>
                         <div class="form-group mx-4 mt-4">
+                            Email address:
                             <input type="email" required  name="email" class="form-control" placeholder="Email">
                         </div>
                         <div class="form-group mx-4 mt-4">
+                            Enter Password:
                             <input type="password" required  name="password" class="form-control" placeholder="Password">
                         </div>
                         <div class="form-group mx-4 mt-4">
+                            Retype Password:
+                            <input type="password" required  name="password" class="form-control" placeholder="Renter Password">
+                        </div>
+                        <div class="form-group mx-4 mt-4">
+                            Area code:
                             <input type="text" required name="code" class="form-control" placeholder="Postal-code">
                         </div>
                         <div class="form-group mx-4 mt-4">
-                            <input type="text" required name="gender" class="form-control" placeholder="Gender">
+                            Gender:
+                            <label class="radio-inline"><input type="radio" name="gender" value="Male"checked>Male</label>
+<label class="radio-inline"><input type="radio" name="gender" value="Female">Female</label>
+<label class="radio-inline"><input type="radio" name="gender" value="other">Other</label>
                         </div>
                         <div class="form-group mx-4 mt-4">
+                            Date of birth:
                             <input type="date" required name="dob" class="form-control" placeholder="Date of birth">
                         </div>
                         <button type="submit" class="btn login-btn btn-block my-4">Add Admin</button>

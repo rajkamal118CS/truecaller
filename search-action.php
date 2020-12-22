@@ -69,7 +69,7 @@ session_start();
                 <tr><th scope='col'>Author</th><td>{$row['user']}</td></tr>
                 <tr><th scope='col'>Publisher</th><td>{$row['type']}</td></tr>
                 <tr><th scope='col'>Number of Copies</th><td>{$row['pin']}</td></tr>
-                <tr><th scope='col'>Image</th><td>photo of person</td></tr>
+                <tr><th scope='col'>Image</th><td><img src='https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-person-512.png' /></td></tr>
                 </thead><tbody></tbody></table>";
                 
             }

@@ -50,8 +50,22 @@ session_start();
 								type VARCHAR(50),
 								count INT
 							)";
+							
 
 							if ($conn->query($sql) === TRUE) {
+							//echo "Table admin_database created successfully";
+							} else {
+							echo "Error creating table: " . $conn->error;
+							}
+							$sql2 = "CREATE TABLE IF NOT EXISTS spam_relation (
+							serial_no INT AUTO_INCREMENT PRIMARY KEY,
+								spam_no VARCHAR(50),
+								spam_name VARCHAR(50), 
+								user VARCHAR(50),
+								type VARCHAR(50)
+							
+							)";
+							if ($conn->query($sql2) === TRUE) {
 							//echo "Table admin_database created successfully";
 							} else {
 							echo "Error creating table: " . $conn->error;
@@ -68,6 +82,8 @@ session_start();
 							$sql = "INSERT INTO spam_database (spam_no, spam_name, user, type,count) 
 							VALUES ('$spamnumber', '$spamname','$user','$type','$count') ON DUPLICATE KEY UPDATE count=count+1 ";
 
+							
+
 
 							if ($conn->query($sql) === TRUE) {
 							//echo "New record created successfully";
@@ -79,6 +95,14 @@ session_start();
 							$sql = "INSERT INTO spam_database (count) 
 							VALUES ('$count') where spam_no='$spamnumber' ";
 								echo "<h3 class='text-center m-4'>spam number Already Taken!!! and increased</h3><form action='add-contact.php'><button class='btn btn-block login-btn' type='submit'>OK</button></form>";
+							}
+
+							$sql1 = "INSERT INTO spam_relation (spam_no, spam_name, user, type) 
+							VALUES ('$spamnumber', '$spamname','$user','$type') ";
+							if ($conn->query($sql1) === TRUE) {
+							//echo "Table admin_database created successfully";
+							} else {
+							echo "Error creating table: " . $conn->error;
 							}
 
 							$conn->close();

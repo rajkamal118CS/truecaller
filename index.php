@@ -63,8 +63,17 @@ session_start();
                                 </div>
                                 <button type="submit" class="btn login-btn btn-block">Login</button>
                             </form>
+
                         </div>
+               <div class="col-8 mx-auto">
+                <h3 class="login-header pb-2">Dont have an account</h3>
+
+              <button class="btn btn-block action-btn p-3" onclick="location.href='add-admin.php'">
+                <i class="fas fa-user-shield pr-3"></i> Sign UP!
+              </button>
+          </div>
                     </div>
+
                 </div>
             </div>
         </div>
