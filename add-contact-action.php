@@ -60,7 +60,7 @@ session_start();
 							$cnumber = filter_input(INPUT_GET,'cnumber');
 							$cname = filter_input(INPUT_GET,'cname');
 							$user = filter_input(INPUT_GET,'user');
-							$type = filter_input(INPUT_GET,'type');
+							$type = filter_input(INPUT_GET,'profession');
 							$pin = filter_input(INPUT_GET,'pin');
 							
 

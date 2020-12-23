@@ -68,7 +68,7 @@ session_start();
                 $adminnumber = filter_input(INPUT_GET,'adminnumber');
                 $adminname = filter_input(INPUT_GET,'adminName');
                 $email = filter_input(INPUT_GET,'email');
-                $userpass = filter_input(INPUT_GET,'password');
+                $userpass = md5(filter_input(INPUT_GET,'password'));
                 $code = filter_input(INPUT_GET,'code');
                 $gender = filter_input(INPUT_GET,'gender');
                 $dob = filter_input(INPUT_GET,'dob');

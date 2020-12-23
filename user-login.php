@@ -17,7 +17,7 @@ session_start();
     
 <?php
 		$usernumber = filter_input(INPUT_GET,'adminnumber');
-		$userpass = filter_input(INPUT_GET,'userpass');
+		$userpass = md5(filter_input(INPUT_GET,'userpass'));
 		
 		if($usernumber=="raj" && $userpass=="kamal")
 		{

@@ -54,6 +54,16 @@ session_start();
                             <input type="text" required name="type" class="form-control" placeholder="Type" value=Person>
                         </div>
                         <div class="form-group mx-4 mt-4">
+                            <label for="cars">Profession:</label>
+  <select required name="profession" class="form-control" >
+    <option value="None">None</option>
+    <option value="Teacher">Teacher</option>
+    <option value="Doctor">Doctor</option>
+    <option value="Student">Student</option>
+    <option value="Police">Police</option>
+  </select>
+                        </div>
+                        <div class="form-group mx-4 mt-4">
                             <input type="number" required name="pin" class="form-control" placeholder="Area-Pin">
                         </div>
                         <button type="submit" class="btn login-btn btn-block my-4">Add Contact</button>
