@@ -28,6 +28,8 @@ session_start();
         </a>
         
         <button class="btn btn-outline logout-btn" onclick="location.href='user-logout.php'">Logout</button>
+    
+        <button class="btn btn-outline logout-btn" onclick="location.href='dashboard.php'">Back</button>
       </div>
 
       <div class="container h-100">
@@ -60,7 +62,21 @@ session_start();
     <option value="Teacher">Teacher</option>
     <option value="Doctor">Doctor</option>
     <option value="Student">Student</option>
+    <option value="Accountant">Accountant</option>
+    <option value="Technician">Technician</option>
+    <option value="Laborer">Laborer</option>
+    <option value="Psychologist">Psychologist</option>
+    <option value="Pharmacist">Pharmacist</option>
+    <option value="Dietitian">Dietitian</option>
+    <option value="Mechanic">Mechanic</option>
+    <option value="Dentist">Dentist</option>
+    <option value="Electrician">Electrician</option>
+    <option value="Programmer">Programmer</option>
+    <option value="Consultant">Consultant</option>
     <option value="Police">Police</option>
+    
+
+
   </select>
                         </div>
                         <div class="form-group mx-4 mt-4">

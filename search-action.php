@@ -37,6 +37,7 @@ session_start();
                 <div class="mt-4">
                     <div class="text-center p-3">
                         <h3 class="theme-color">Contact detail</h3>
+                        <img src='https://thispersondoesnotexist.com/image' width="300px" height="300px" />
                     </div>
                 </div>
                   
@@ -69,7 +70,7 @@ session_start();
                 <tr><th scope='col'>Author</th><td>{$row['user']}</td></tr>
                 <tr><th scope='col'>Publisher</th><td>{$row['type']}</td></tr>
                 <tr><th scope='col'>Number of Copies</th><td>{$row['pin']}</td></tr>
-                <tr><th scope='col'>Image</th><td><img src='https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-person-512.png' /></td></tr>
+                
                 </thead><tbody></tbody></table>";
                 
             }

@@ -56,6 +56,20 @@ session_start();
 							} else {
 							echo "Error creating table: " . $conn->error;
 							}
+
+
+							$sql2 = "CREATE TABLE IF NOT EXISTS profession_database (
+							p_id INT AUTO_INCREMENT PRIMARY KEY,
+							
+								p_name VARCHAR(50)
+								
+							
+							)";
+							if ($conn->query($sql2) === TRUE) {
+							//echo "Table admin_database created successfully";
+							} else {
+							echo "Error creating table: " . $conn->error;
+							}
 							
 							$cnumber = filter_input(INPUT_GET,'cnumber');
 							$cname = filter_input(INPUT_GET,'cname');
