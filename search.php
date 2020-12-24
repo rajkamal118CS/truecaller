@@ -31,6 +31,7 @@ session_start();
       </div>
 
       <div class="container">
+        <h3>search An unknown number:</h3>
           <div class="row my-4">
               
                           <div class="col-sm">
@@ -54,6 +55,58 @@ session_start();
         
           
           
+          
+      </div>
+
+
+      <div class="container h-100">
+        <div class="row align-items-center h-100" >
+            
+            
+          <div class="col-8 mx-auto">
+
+                <div class="shadow-lg bg-white mt-4">
+                    <div class="col form-header text-center p-3">
+                        Search Emergency Contact In ur Area
+                    </div>
+                    <form action="search-emergency.php" method="get">
+                        
+                        <div class="form-group mx-4 mt-4">
+                            Area code:
+                            <input type="text" name="code" class="form-control" placeholder="Postal-code">
+                        </div>
+                        <div class="form-group mx-4 mt-4">
+                            <label for="cars">profession:</label>
+  <select name="profession" class="form-control" >
+    <option value="None">None</option>
+    <option value="Teacher">Teacher</option>
+    <option value="Doctor">Doctor</option>
+    <option value="Student">Student</option>
+    <option value="Accountant">Accountant</option>
+    <option value="Technician">Technician</option>
+    <option value="Laborer">Laborer</option>
+    <option value="Psychologist">Psychologist</option>
+    <option value="Pharmacist">Pharmacist</option>
+    <option value="Dietitian">Dietitian</option>
+    <option value="Mechanic">Mechanic</option>
+    <option value="Dentist">Dentist</option>
+    <option value="Electrician">Electrician</option>
+    <option value="Programmer">Programmer</option>
+    <option value="Consultant">Consultant</option>
+    <option value="Police">Police</option>
+    
+
+
+  </select>
+                        </div>
+                        
+                       
+                        <button type="submit" class="btn login-btn btn-block my-4">Search contact in ur Area</button>
+                    </form>
+                </div>
+                
+          </div>
+        </div>
           
       </div>
       

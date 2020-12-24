@@ -52,7 +52,7 @@ session_start();
 		              if ($conn->connect_error) {
 			              die("Connection failed: " . $conn->connect_error);
 		              } 
-                  $usernumber = filter_input(INPUT_GET,'query');
+                  $usernumber = $_SESSION["userid"];
 
                   $sql="SELECT * FROM contact_database where user='$usernumber'";
                   $ret=mysqli_query($conn,$sql);

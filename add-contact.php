@@ -49,9 +49,7 @@ session_start();
                         <div class="form-group mx-4 mt-4">
                             <input type="text" required name="cnumber" class="form-control" placeholder="Contact Number">
                         </div>
-                        <div class="form-group mx-4 mt-4">
-                            <input type="text" required name="user" class="form-control" placeholder="User id">
-                        </div>
+                                    
                         <div class="form-group mx-4 mt-4">
                             <input type="text" required name="type" class="form-control" placeholder="Type" value=Person>
                         </div>

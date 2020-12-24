@@ -31,21 +31,12 @@ session_start();
       </div>
 
       <div class="container">
+         
           <div class="row my-4">
-              
-                          <div class="col-sm">
-                
-                <form action="view-contact.php" method="get">
-                  <div class="input-group md-form form-md form-2 pl-0">
-                    <input class="form-control my-0 py-1" name="query" type="text" placeholder="Enter ur number to view ur local contact List" aria-label="Search">
-                    <div class="input-group-append">
-                      <button class="btn">
-                      <span class="input-group-text search-btn" id="basic-text1"><i class="fas fa-search search-icon"
-                          aria-hidden="true"></i></span>
-                      </button>
-                    </div>
-                    </div>
-                  </form>
+            <div class="col-sm">
+                <button class="btn btn-block action-btn p-3" onclick="location.href='view-contact.php'">
+                    <i class="fas fa-stream pr-3"></i> View your local contact
+                </button>
             </div>
           </div>
             <div class="row my-4">

@@ -13,6 +13,13 @@ session_start();
     <title>Login</title>
 </head>
 <body>
+	<?php
+        if($_SESSION["userid"] === ""){
+          echo $_SESSION['userid'];
+          echo "login";
+          header("Location: index.php ");
+        }
+      ?>
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
         <a class="navbar-brand my-0 mr-md-auto" href="dashboard.php">
             <img src="images/simplelogo-dark.svg" alt="logo" width="130" height="30" alt="Logo" loading="lazy">
@@ -73,7 +80,8 @@ session_start();
 							
 							$cnumber = filter_input(INPUT_GET,'cnumber');
 							$cname = filter_input(INPUT_GET,'cname');
-							$user = filter_input(INPUT_GET,'user');
+							//$user = filter_input(INPUT_GET,'user');
+							$user=$_SESSION["userid"];
 							$type = filter_input(INPUT_GET,'profession');
 							$pin = filter_input(INPUT_GET,'pin');
 							

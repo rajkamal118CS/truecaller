@@ -45,18 +45,14 @@ session_start();
            
           </div>
           <div class="row my-4">
-          <div class="col-sm">
-              <button class="btn btn-block action-btn p-3" onclick="location.href='add-admin.php'">
-                <i class="fas fa-user-shield pr-3"></i> Admin
-              </button>
-          </div>
+         
            <div class="col-sm">
                 <button class="btn btn-block action-btn p-3" onclick="location.href='add-spam.php'">
                     <i class="fas fa-search pr-3"></i> Add spam
                 </button>
             </div>
-        </div>
-        <div class="row my-4">
+        
+        
             <div class="col-sm">
               <button class="btn btn-block action-btn p-3" onclick="location.href='address.php'">
                 <i class="fas fa-book pr-3"></i> Add address detail
