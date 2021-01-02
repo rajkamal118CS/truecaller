@@ -47,12 +47,25 @@ session_start();
                         <div class="form-group mx-4 mt-4">
                             <input type="text" required name="spamnumber" class="form-control" placeholder="Spam Number">
                         </div>
+                        
                         <div class="form-group mx-4 mt-4">
-                            <input type="text" required name="type" class="form-control" placeholder="Type" value="Spam">
+                            <label for="cars">Type of spam:</label>
+  <select required name="type" class="form-control" >
+    <option value="None">None</option>
+    <option value="Advertisement">Advertisement</option>
+    <option value="Promotion">Promotion</option>
+    <option value="bank fraud">Bank fraud</option>
+    <option value="Survey call">Survey call</option>
+    <option value="Bot call">Bot call</option>
+    
+    
+
+
+  </select>
                         </div>
-                        <div class="form-group mx-4 mt-4">
+                        <!-- <div class="form-group mx-4 mt-4">
                             <input type="text" required name="user" class="form-control" placeholder="User">
-                        </div>
+                        </div> -->
                         
                         <button type="submit" class="btn login-btn btn-block my-4">Add Spam</button>
                     </form>

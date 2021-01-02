@@ -19,7 +19,7 @@ session_start();
         if($_SESSION["userid"] === ""){
           echo $_SESSION['userid'];
           echo "login";
-          header("Location: index.php ");
+          header("Location: dashboard.php ");
         }
       ?>
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
@@ -75,11 +75,13 @@ session_start();
                 
 
 
-                $sql = "INSERT INTO admin_database (user_number, user_name, user_email, user_password, user_pin, user_gender, user_dob) 
+
+
+                $sql2 = "INSERT INTO admin_database (user_number, user_name, user_email, user_password, user_pin, user_gender, user_dob) 
                 VALUES ('$adminnumber', '$adminname','$email', '$userpass', '$code', '$gender', '$dob')";
 
 
-                if ($conn->query($sql) === TRUE) {
+                if ($conn->query($sql2) === TRUE) {
                 //echo "New record created successfully";
                 echo "<h3 class='text-center m-4'>New admin added is successfully....</h3><form action='dashboard.php'><button class='btn btn-block login-btn' type='submit'>OK</button></form>";
                 } else {

@@ -14,7 +14,7 @@ session_start();
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="vender/css/all.css">
 </head>
-<body>
+<body >
     <?php
         if($_SESSION["userid"] === ""){
           echo $_SESSION['userid'];
@@ -30,7 +30,7 @@ session_start();
         <button class="btn btn-outline logout-btn" onclick="location.href='user-logout.php'">Logout</button>
       </div>
 
-      <div class="container">
+      <div class="container" >
           <div class="row my-4">
               <div class="col-sm">
                 <button class="btn btn-block action-btn p-3" onclick="location.href='add-contact.php'">

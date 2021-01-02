@@ -62,7 +62,7 @@ session_start();
                 
 					          while($row=mysqli_fetch_assoc($ret))
 					          {
-						          echo"<tr><th scope='row'>{$row['spam_no']}</th><td>{$row['spam_name']}</td><td>{$row['type']}</td><td>{$row['user']}</td><td>{$row['count']}</td></tr>";
+						          echo"<tr><th scope='row'>{$row['spam_no']}</th><td>{$row['spam_name']}</td><td>{$row['Type']}</td><td>{$row['user']}</td><td>{$row['count']}</td></tr>";
 					          }
             
 			            echo"</tbody></table>";

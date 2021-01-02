@@ -74,7 +74,8 @@ session_start();
 							$spamnumber = filter_input(INPUT_GET,'spamnumber');
 							$spamname = filter_input(INPUT_GET,'spamname');
 							$type = filter_input(INPUT_GET,'type');
-							$user = filter_input(INPUT_GET,'user');
+							
+							$user=$_SESSION["userid"];
 							$count=1;
 							
 

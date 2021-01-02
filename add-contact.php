@@ -72,6 +72,7 @@ session_start();
     <option value="Programmer">Programmer</option>
     <option value="Consultant">Consultant</option>
     <option value="Police">Police</option>
+    <option value="Designer">Designer</option>
     
 
 
