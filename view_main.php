@@ -28,6 +28,7 @@ session_start();
         </a>
         
         <button class="btn btn-outline logout-btn" onclick="location.href='user-logout.php'">Logout</button>
+        <button class="btn btn-outline logout-btn" onclick="location.href='dashboard.php'">Back</button>
       </div>
 
       <div class="container">
@@ -38,20 +39,17 @@ session_start();
                     <i class="fas fa-stream pr-3"></i> View your local contact
                 </button>
             </div>
-
-          </div>
-            <div class="row my-4">
-            <div class="col-sm">
-                <button class="btn btn-block action-btn p-3" onclick="location.href='view_contact_all.php'">
-                    <i class="fas fa-stream pr-3"></i> View All Contact
-                </button>
-            </div>
             <div class="col-sm">
                 <button class="btn btn-block action-btn p-3" onclick="location.href='view_spam.php'">
                     <i class="fas fa-stream pr-3"></i> View Spam contacts
                 </button>
 
             </div>
+
+          </div>
+            <div class="row my-4">
+            
+            
           </div>
           <!-- <div class="row my-4"> -->
              <form action="search-contact-profession.php" method="get">
@@ -84,8 +82,16 @@ session_start();
                         
                         <button type="submit" class="btn login-btn btn-block my-4">Search Contact by profession</button>
                     </form>
-            
+                    <br>
+                    <br>
+
+            <div class="col-sm">
+                <button class="btn btn-block action-btn p-3" onclick="location.href='view_contact_all.php'">
+                    <i class="fas fa-stream pr-3"></i> View Detailed contact information if available
+                </button>
+            </div>
           </div>
+          
           </div>
           
         

@@ -27,6 +27,7 @@ session_start();
         </a>
         
         <button class="btn btn-outline logout-btn" onclick="location.href='user-logout.php'">Logout</button>
+        <button class="btn btn-outline logout-btn" onclick="location.href='view_main.php'">Back</button>
       </div>
 
       <div class="container h-100">
@@ -56,6 +57,7 @@ session_start();
 
                   $sql="SELECT * FROM contact_database where user='$usernumber'";
                   $ret=mysqli_query($conn,$sql);
+
                   if(mysqli_num_rows($ret)>0)
                   {
 					          
@@ -68,12 +70,12 @@ session_start();
             
 			            echo"</tbody></table>";
                      
-                  echo"<form action='dashboard.php'><button class='btn bg-light' type='submit'>Go Back</button></form>";
+                  echo"<form action='view_main.php'><button class='btn bg-light' type='submit'>Go Back</button></form>";
                   echo"</div>";
                   }
                   if(mysqli_num_rows($ret)==0)
                   {
-                      echo "<div id='card'><h1>No Contact are thier to view....</h1><form action='admin_home.php'><button type='submit' id='done'>Done</button></form></div>";
+                      echo "<div id='card'><h1>No Contact are thier to view....</h1><form action='dashboard.php'><button type='submit' id='done'>Done</button></form></div>";
 
 
 		
@@ -97,17 +99,17 @@ session_start();
                 
                     while($row=mysqli_fetch_assoc($ret))
                     {
-                      echo"<tr><th scope='row'>{$row['spam_no']}</th><td>{$row['spam_name']}</td><td>{$row['user']}</td><td>{$row['type']}</td><td>{$row['count']}</td></tr>";
+                      echo"<tr><th scope='row'>{$row['spam_no']}</th><td>{$row['spam_name']}</td><td>{$row['user']}</td><td>{$row['Type']}</td><td>{$row['count']}</td></tr>";
                     }
             
                   echo"</tbody></table>";
                      
-                  echo"<form action='dashboard.php'><button class='btn bg-light' type='submit'>Go Back</button></form>";
+                  echo"<form action='view_main.php'><button class='btn bg-light' type='submit'>Go Back</button></form>";
                   echo"</div>";
                   }
                   if(mysqli_num_rows($ret)==0)
                   {
-                      echo "<div id='card'><h1>No Contact are thier to view....</h1><form action='admin_home.php'><button type='submit' id='done'>Done</button></form></div>";
+                      echo "<div id='card'><h1>No Contact are thier to view....</h1><form action='dashboard.php'><button type='submit' id='done'>Done</button></form></div>";
                     }?>
                 
           </div>

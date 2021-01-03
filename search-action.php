@@ -56,7 +56,7 @@ session_start();
 		
 		$query = filter_input(INPUT_GET,'query');
 		
-		$sql="SELECT * FROM contact_database WHERE contact_number='$query'";
+		$sql="SELECT * FROM contact_database WHERE contact_number='$query' ";
 		$ret=mysqli_query($conn,$sql);
             if(mysqli_num_rows($ret)>0)
             {
@@ -67,9 +67,9 @@ session_start();
                 echo"<table class='table table-striped'><thead>
                 <tr><th scope='col'>Contact Number</th><td scope='row'>{$row['contact_number']}</td></tr>
                 <tr><th scope='col'>Contact Name</th><td scope='row'>{$row['contact_name']}</td></tr>
-                <tr><th scope='col'>Author</th><td>{$row['user']}</td></tr>
-                <tr><th scope='col'>Publisher</th><td>{$row['type']}</td></tr>
-                <tr><th scope='col'>Number of Copies</th><td>{$row['pin']}</td></tr>
+                <tr><th scope='col'>User who added this contact</th><td>{$row['user']}</td></tr>
+                <tr><th scope='col'>Profession</th><td>{$row['type']}</td></tr>
+                <tr><th scope='col'>Area code</th><td>{$row['pin']}</td></tr>
                 
                 </thead><tbody></tbody></table>";
                 
@@ -79,8 +79,58 @@ session_start();
             }
             if(mysqli_num_rows($ret)==0)
             {
-                      echo "<h3 class='text-center'>No such Books are thier....</h3><div class='col'><form action='dashboard.php'><button type='submit' class='btn bg-light btn-block mt-4'>Done</button></form></div>";
-		
+              $sql="SELECT * FROM spam_database WHERE spam_no='$query' ";
+    $ret=mysqli_query($conn,$sql);
+            if(mysqli_num_rows($ret)>0)
+            {
+              echo "<h3>Its a spam number</h3>";
+            
+                
+            while($row=mysqli_fetch_assoc($ret))
+            {  
+                echo"<table class='table table-striped'><thead>
+                <tr><th scope='col'>Spam Number</th><td scope='row'>{$row['spam_no']}</td></tr>
+                <tr><th scope='col'>Spam Name</th><td scope='row'>{$row['spam_name']}</td></tr>
+                <tr><th scope='col'>User who reported this spam</th><td>{$row['user']}</td></tr>
+                <tr><th scope='col'>Type of spam</th><td>{$row['Type']}</td></tr>
+                <tr><th scope='col'>No. of times reported</th><td>{$row['count']}</td></tr>
+                
+                </thead><tbody></tbody></table>";
+                
+            }
+            $sql="SELECT  r.spam_name ,r.type FROM spam_database s,spam_relation r WHERE  s.spam_no=r.spam_no AND s.spam_no='$query' ";
+    $ret=mysqli_query($conn,$sql);
+            if(mysqli_num_rows($ret)>0)
+            {
+             
+               echo "<h3>More detail</h3>";
+               echo "<h5>Other name and type given by users</h5>"; 
+               echo"<table class='table table-striped'><thead><tr><th scope='col'>Spam name</th><th scope='col'>Type of spam</th></tr></thead><tbody>";
+            while($row=mysqli_fetch_assoc($ret))
+            {  
+              
+                echo"<table class='table table-striped'><thead>
+                <tr><td scope='row'>{$row['spam_name']}</td>
+                <td scope='row'>{$row['type']}</td></tr>
+                
+                
+                
+                </thead><tbody></tbody></table>";
+                
+            }
+
+
+
+            
+            }}
+            if(mysqli_num_rows($ret)==0)
+            {
+
+                      echo "<h3 class='text-center'>No such Contacts are their....</h3><div class='col'><form action='dashboard.php'><button type='submit' class='btn bg-light btn-block mt-4'>Done</button></form></div>";
+    
+            }
+
+                     
             }?>
                 
           </div>

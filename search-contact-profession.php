@@ -27,6 +27,8 @@ session_start();
         </a>
         
         <button class="btn btn-outline logout-btn" onclick="location.href='user-logout.php'">Logout</button>
+        <button class="btn btn-outline logout-btn" onclick="location.href='view_main.php'">Back</button>
+
       </div>
 
       <div class="container h-100">

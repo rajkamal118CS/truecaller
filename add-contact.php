@@ -50,9 +50,7 @@ session_start();
                             <input type="text" required name="cnumber" class="form-control" placeholder="Contact Number">
                         </div>
                                     
-                        <div class="form-group mx-4 mt-4">
-                            <input type="text" required name="type" class="form-control" placeholder="Type" value=Person>
-                        </div>
+                        
                         <div class="form-group mx-4 mt-4">
                             <label for="cars">Profession:</label>
   <select required name="profession" class="form-control" >
