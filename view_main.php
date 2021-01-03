@@ -38,6 +38,7 @@ session_start();
                     <i class="fas fa-stream pr-3"></i> View your local contact
                 </button>
             </div>
+
           </div>
             <div class="row my-4">
             <div class="col-sm">
@@ -51,6 +52,39 @@ session_start();
                 </button>
 
             </div>
+          </div>
+          <!-- <div class="row my-4"> -->
+             <form action="search-contact-profession.php" method="get">
+                        
+                        
+                            <label for="cars">Profession:</label>
+  <select required name="profession" class="form-control" >
+    <option value="None">None</option>
+    <option value="Teacher">Teacher</option>
+    <option value="Doctor">Doctor</option>
+    <option value="Student">Student</option>
+    <option value="Accountant">Accountant</option>
+    <option value="Technician">Technician</option>
+    <option value="Laborer">Laborer</option>
+    <option value="Psychologist">Psychologist</option>
+    <option value="Pharmacist">Pharmacist</option>
+    <option value="Dietitian">Dietitian</option>
+    <option value="Mechanic">Mechanic</option>
+    <option value="Dentist">Dentist</option>
+    <option value="Electrician">Electrician</option>
+    <option value="Programmer">Programmer</option>
+    <option value="Consultant">Consultant</option>
+    <option value="Police">Police</option>
+    <option value="Designer">Designer</option>
+    
+
+
+  </select>
+                        
+                        
+                        <button type="submit" class="btn login-btn btn-block my-4">Search Contact by profession</button>
+                    </form>
+            
           </div>
           </div>
           
