@@ -80,7 +80,7 @@ session_start();
   </select>
                         
                         
-                        <button type="submit" class="btn login-btn btn-block my-4">Search Contact by profession</button>
+                        <button type="submit" class="btn login-btn btn-block my-4">View Contact by profession</button>
                     </form>
                     <br>
                     <br>

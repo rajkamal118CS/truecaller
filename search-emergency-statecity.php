@@ -28,6 +28,7 @@ session_start();
         </a>
         
         <button class="btn btn-outline logout-btn" onclick="location.href='user-logout.php'">Logout</button>
+        <button class="btn btn-outline logout-btn" onclick="location.href='search.php'">Back</button>
       </div>
 
       <div class="container h-100">
@@ -63,18 +64,20 @@ session_start();
 
     $sql="select city from city where id='$city'";
     $ret=mysqli_query($conn,$sql);
+    $citty=1;
     if(mysqli_num_rows($ret)>0){
       $row=mysqli_fetch_array($ret);
             
 
-            
+            $citty=$row[0];
 
 
 
     }
 
     $sql="SELECT c.contact_number,c.contact_name,c.user,c.type,c.pin FROM contact_database c,address_database a where
-                    c.pin=a.pin and type='$profession'  and city='$row[0]'";
+                    c.pin=a.pin and type='$profession'  and city='$citty'";
+
     $ret=mysqli_query($conn,$sql);
     
 

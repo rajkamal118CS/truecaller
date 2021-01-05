@@ -37,6 +37,7 @@ session_start();
                 <div class="mt-4">
                     <div class="text-center p-3">
                         <h3 class="theme-color">Contact detail</h3>
+                        <h6> The image generated is random ony for display purpose.</h6>
                         <img src='https://thispersondoesnotexist.com/image' width="300px" height="300px" />
                     </div>
                 </div>
@@ -98,20 +99,21 @@ session_start();
                 </thead><tbody></tbody></table>";
                 
             }
-            $sql="SELECT  r.spam_name ,r.type FROM spam_database s,spam_relation r WHERE  s.spam_no=r.spam_no AND s.spam_no='$query' ";
+            $sql="SELECT  r.spam_name ,r.type ,r.user FROM spam_database s,spam_relation r WHERE  s.spam_no=r.spam_no AND s.spam_no='$query' ";
     $ret=mysqli_query($conn,$sql);
             if(mysqli_num_rows($ret)>0)
             {
              
                echo "<h3>More detail</h3>";
                echo "<h5>Other name and type given by users</h5>"; 
-               echo"<table class='table table-striped'><thead><tr><th scope='col'>Spam name</th><th scope='col'>Type of spam</th></tr></thead><tbody>";
+               echo"<table class='table table-striped'><thead><tr><th scope='col'>Spam name</th><th scope='col'>Type of spam</th><th scope='col'>User who reported it</th></tr></thead><tbody>";
             while($row=mysqli_fetch_assoc($ret))
             {  
               
                 echo"<table class='table table-striped'><thead>
                 <tr><td scope='row'>{$row['spam_name']}</td>
-                <td scope='row'>{$row['type']}</td></tr>
+                <td scope='row'>{$row['type']}</td>
+                <td scope='row'>{$row['user']}</td></tr>
                 
                 
                 

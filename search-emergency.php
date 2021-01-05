@@ -28,6 +28,7 @@ session_start();
         </a>
         
         <button class="btn btn-outline logout-btn" onclick="location.href='user-logout.php'">Logout</button>
+        <button class="btn btn-outline logout-btn" onclick="location.href='search.php'">Back</button>
       </div>
 
       <div class="container h-100">
@@ -80,9 +81,9 @@ session_start();
                 <table class='table table-striped'><thead>
                 <tr><th scope='col'>Contact Number</th><td scope='row'>{$row['contact_number']}</td></tr>
                 <tr><th scope='col'>Contact Name</th><td scope='row'>{$row['contact_name']}</td></tr>
-                <tr><th scope='col'>Author</th><td>{$row['user']}</td></tr>
-                <tr><th scope='col'>Publisher</th><td>{$row['type']}</td></tr>
-                <tr><th scope='col'>Number of Copies</th><td>{$row['pin']}</td></tr>
+                <tr><th scope='col'>Added by user</th><td>{$row['user']}</td></tr>
+                <tr><th scope='col'>Profession</th><td>{$row['type']}</td></tr>
+                <tr><th scope='col'>area code</th><td>{$row['pin']}</td></tr>
                 
                 </thead><tbody></tbody></table>";
                 $serialno=$serialno+1;

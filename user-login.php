@@ -18,13 +18,14 @@ session_start();
 <?php
 		$usernumber = filter_input(INPUT_GET,'adminnumber');
 		$userpass = md5(filter_input(INPUT_GET,'userpass'));
+        // echo "$usernumber";
 		
-		if($usernumber=="raj" && $userpass=="kamal")
-		{
-            $_SESSION["userid"] = $userid;
-            header("Location: dashboard.php");
+		// if($usernumber=="raj" && $userpass=="kamal")
+		// {
+  //           $_SESSION["userid"] = $usernumber;
+  //           header("Location: dashboard.php");
 			
-		}else{
+		// }else{
             $servername = "localhost";
             $username = "root";
             $password = "";
@@ -46,9 +47,17 @@ session_start();
                 header("Location: dashboard.php");
                 
             }else {
+                if($usernumber=="raj" && $userpass=="kamal")
+        {
+            $_SESSION["userid"] = $usernumber;
+            header("Location: dashboard.php");
+            
+        }else{
+
+
                 echo "<div class='container-fluid'><div class='row align-items-center h-100' ><div class='col-3 mx-auto'><div class='mt-4' id='card'><p>Invalid Id or Password!!!</p><p>Try again with valid Id and Password</p><form action='index.php' method='get'><button class='btn login-btn' type='submit' id='done'>Done</button></form></div></div></div></div>";
-            }
-        }
+            }}
+        
 		
 		?>
 </body>
