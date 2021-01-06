@@ -18,6 +18,7 @@ session_start();
 <?php
 		$usernumber = filter_input(INPUT_GET,'adminnumber');
 		$userpass = md5(filter_input(INPUT_GET,'userpass'));
+        $type = filter_input(INPUT_GET,'type');
         // echo "$usernumber";
 		
 		// if($usernumber=="raj" && $userpass=="kamal")
@@ -30,7 +31,7 @@ session_start();
             $username = "root";
             $password = "";
             $dbname ="librarydb";
-            $relation=filter_input(INPUT_GET,'adminnumber');
+            
 
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);
@@ -39,24 +40,29 @@ session_start();
                 die("Connection failed: " . $conn->connect_error);
             } 
 
-            $sql = "SELECT * FROM admin_database WHERE user_number='$usernumber' AND user_password='$userpass'";
+            $sql = "SELECT * FROM admin_database WHERE user_number='$usernumber' AND user_password='$userpass' AND type='$type' ";
             $result = $conn->query($sql);
 
-            if ($result->num_rows > 0) {
+
+            if ($result->num_rows > 0 and $type=="user") {
+               
                 $_SESSION["userid"] = $usernumber;
                 header("Location: dashboard.php");
+                }
+
+                elseif ($result->num_rows > 0 and $type=="admin") {
+                    
+                {$_SESSION["userid"] = $usernumber;
+                header("Location: dashboard_admin.php");
+            }
+
                 
             }else {
-                if($usernumber=="raj" && $userpass=="kamal")
-        {
-            $_SESSION["userid"] = $usernumber;
-            header("Location: dashboard.php");
-            
-        }else{
+                
 
 
                 echo "<div class='container-fluid'><div class='row align-items-center h-100' ><div class='col-3 mx-auto'><div class='mt-4' id='card'><p>Invalid Id or Password!!!</p><p>Try again with valid Id and Password</p><form action='index.php' method='get'><button class='btn login-btn' type='submit' id='done'>Done</button></form></div></div></div></div>";
-            }}
+            }
         
 		
 		?>

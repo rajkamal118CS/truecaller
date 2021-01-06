@@ -61,6 +61,13 @@ session_start();
                                 <label for="loginPassword">Password</label>
                                 <input type="password" name="userpass" class="form-control" id="loginPassword">
                                 </div>
+                                <div class="form-group pb-2">
+                            
+  <select required name="type" class="form-control" >
+    <option value="user">User</option>
+    <option value="admin">Administrator</option>
+</select>
+</div>
                                 <button type="submit" class="btn login-btn btn-block">Login</button>
                             </form>
 

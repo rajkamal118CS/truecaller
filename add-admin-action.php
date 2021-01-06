@@ -57,7 +57,8 @@ session_start();
                     user_password VARCHAR(50),
                     user_pin VARCHAR(50),
                     user_gender VARCHAR(50),
-                    user_dob DATE
+                    user_dob DATE,
+                    user_type VARCHAR(20)
                 )";
 
                 if ($conn->query($sql) === TRUE) {
@@ -78,8 +79,8 @@ session_start();
 
 
 
-                $sql2 = "INSERT INTO admin_database (user_number, user_name, user_email, user_password, user_pin, user_gender, user_dob) 
-                VALUES ('$adminnumber', '$adminname','$email', '$userpass', '$code', '$gender', '$dob')";
+                $sql2 = "INSERT INTO admin_database (user_number, user_name, user_email, user_password, user_pin, user_gender, user_dob,user_type) 
+                VALUES ('$adminnumber', '$adminname','$email', '$userpass', '$code', '$gender', '$dob','User')";
 
 
                 if ($conn->query($sql2) === TRUE) {
