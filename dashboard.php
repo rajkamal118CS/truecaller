@@ -183,22 +183,7 @@ session_start();
           </div>
         </div>
 
-          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-            <div class="box">
-             <button class="btn btn-block action-btn p-3" onclick="location.href='view_address.php'">
-                <i class="fas fa-book pr-3"></i> View Addresss
-              </button>
-
-          </div>
-        </div>
-          <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-            <div class="box">
-            
-              <button class="btn btn-block action-btn p-3" onclick="location.href='address.php'">
-                <i class="fas fa-plus-square pr-3"></i> Add address detail
-              </button>
-            </div>
-          </div>
+         
 
           
 
