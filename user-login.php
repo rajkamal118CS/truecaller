@@ -44,17 +44,17 @@ session_start();
             $result = $conn->query($sql);
 
 
-            if ($result->num_rows > 0 and $type=="user") {
+            if ($result->num_rows > 0 && $type=="user") {
                
                 $_SESSION["userid"] = $usernumber;
                 header("Location: dashboard.php");
                 }
 
-                elseif ($result->num_rows > 0 and $type=="admin") {
+                elseif ($result->num_rows > 0 && $type=="admin") {
                     
-                {$_SESSION["userid"] = $usernumber;
+                $_SESSION["userid"] = $usernumber;
                 header("Location: dashboard_admin.php");
-            }
+            
 
                 
             }else {

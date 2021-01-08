@@ -98,16 +98,31 @@ session_start();
 
           
             <div class="box">
-              <button class="btn btn-block action-btn p-3" onclick="location.href='add-contact.php'">
-                    <i class="far fa-plus-square pr-3"></i> Add Local contact
+              <form action="delete-contact.php" method="get">
+                  <div class="input-group md-form form-md form-2 pl-0">
+                    <input class="form-control my-0 py-1" name="contact" type="text" placeholder="Enter Contact number" aria-label="Delete">
+                    <div class="input-group-append">
+                      <button class="btn btn-block action-btn p-3" ">
+                    <i class="fas fa-plus-square pr-3"></i>Delete Contact
                 </button>
+                    </div>
+                    </div>
+                  </form>
+              
           </div>
         
           
             <div class="box">
-             <button class="btn btn-block action-btn p-3" onclick="location.href='add-spam.php'">
-                    <i class="fas fa-plus-square pr-3"></i> Add spam
+             <form action="delete-spam.php" method="get">
+                  <div class="input-group md-form form-md form-2 pl-0">
+                    <input class="form-control my-0 py-1" name="contact" type="text" placeholder="Enter spam number" aria-label="Delete">
+                    <div class="input-group-append">
+                      <button class="btn btn-block action-btn p-3" ">
+                    <i class="fas fa-plus-square pr-3"></i>Remove spam
                 </button>
+                    </div>
+                    </div>
+                  </form>
           </div>
        
 
@@ -136,9 +151,14 @@ session_start();
               </button>
             </div>
             <div class="box">
-              <button class="btn btn-block action-btn p-3" onclick="location.href='search-contact.php'">
-                    <i class="fas fa-search pr-3"></i> Search unknown Number
+              <button class="btn btn-block action-btn p-3" onclick="location.href='feedback_view.php'">
+                    <i class="fas fa-search pr-3"></i> View feedbacks
                 </button>
+            </div>
+            <div class="box">
+              <button class="btn btn-block action-btn p-3" onclick="location.href='log.php'">
+                <i class="fas fa-search pr-3"></i> View Recently added contact/spam/user
+              </button>
             </div>
             <div class="box">
               <button class="btn btn-block action-btn p-3" onclick="location.href='view_main.php'">
