@@ -146,8 +146,13 @@ session_start();
           
 
             <div class="box">
-              <button class="btn btn-block action-btn p-3" onclick="location.href='search.php'">
-                <i class="fas fa-search pr-3"></i> Search emergency contact Based on Location
+              <button class="btn btn-block action-btn p-3" onclick="location.href='view_contactlist.php'">
+                <i class="fas fa-search pr-3"></i> View Contact Database
+              </button>
+            </div>
+            <div class="box">
+              <button class="btn btn-block action-btn p-3" onclick="location.href='view_spamlist.php'">
+                <i class="fas fa-search pr-3"></i> View Spam Database
               </button>
             </div>
             <div class="box">
@@ -161,8 +166,8 @@ session_start();
               </button>
             </div>
             <div class="box">
-              <button class="btn btn-block action-btn p-3" onclick="location.href='view_main.php'">
-                    <i class="far fa-plus-square pr-3"></i> View Contact Database
+              <button class="btn btn-block action-btn p-3" onclick="location.href='view_adminlist.php'">
+                    <i class="far fa-plus-square pr-3"></i> View Users database
                 </button>
           </div>
         </div>

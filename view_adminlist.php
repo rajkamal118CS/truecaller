@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>view address</title>
+    <title>view contact</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css" >
@@ -36,7 +36,7 @@ session_start();
 
                 <div class="mt-2">
                     <div class="text-center p-3">
-                        <h3 class="theme-color">All Address</h3>
+                        <h3 class="theme-color">Detailed information of contacts</h3>
                     </div>
                 </div>
 
@@ -53,26 +53,26 @@ session_start();
 			              die("Connection failed: " . $conn->connect_error);
 		              } 
 
-                  $sql='select * from address_database';
+                  $sql='SELECT * FROM admin_database ';
                   $ret=mysqli_query($conn,$sql);
                   if(mysqli_num_rows($ret)>0)
                   {
 					          
-                    echo"<table class='table table-striped'><thead><tr><th scope='col'>Area Code</th><th scope='col'>state</th><th scope='col'>City</th><th scope='col'>Country</th></tr></thead><tbody>";
+                    echo"<table class='table table-striped'><thead><tr><th scope='col'>User Number</th><th scope='col'>User Name</th><th scope='col'>Email</th><th scope='col'>Password</th><th scope='col'>Area code</th><th scope='col'>Gender</th><th scope='col'>DOB</th></tr></thead><tbody>";
                 
 					          while($row=mysqli_fetch_assoc($ret))
 					          {
-						          echo"<tr><th scope='row'>{$row['pin']}</th><td>{$row['state']}</td><td>{$row['city']}</td><td>{$row['country']}</td></tr>";
+						          echo"<tr><th scope='row'>{$row['user_number']}</th><td>{$row['user_name']}</td><td>{$row['user_email']}</td><td>{$row['user_password']}</td><td>{$row['user_pin']}</td><td>{$row['user_gender']}</td><td>{$row['user_dob']}</td></tr>";
 					          }
             
 			            echo"</tbody></table>";
                      
-                  echo"<form action='dashboard.php'><button class='btn bg-light' type='submit'>Go Back</button></form>";
+                  echo"<form action='dashboard_admin.php'><button class='btn bg-light' type='submit'>Go Back</button></form>";
                   echo"</div>";
                   }
                   if(mysqli_num_rows($ret)==0)
                   {
-                      echo "<div id='card'><h1>No Address are thier to view....</h1><form action='admin_home.php'><button type='submit' id='done'>Done</button></form></div>";
+                      echo "<div id='card'><h1>No contacts are thier to view....</h1><form action='dashboard_admin.php'><button type='submit' id='done'>Done</button></form></div>";
 		
                   }?>
                 
