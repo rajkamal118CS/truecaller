@@ -91,85 +91,105 @@ session_start();
         <header class="section-header">
           <br>
           <h3>Services</h3>
+          <br>
+          <br>
           
         </header>
 
         <div class="row">
 
-          
+          <div class="col-md-6 col-lg-4 offset-lg-0 wow bounceInUp" data-wow-duration="1.4s">
             <div class="box">
               <form action="delete-contact.php" method="get">
                   <div class="input-group md-form form-md form-2 pl-0">
                     <input class="form-control my-0 py-1" name="contact" type="text" placeholder="Enter Contact number" aria-label="Delete">
                     <div class="input-group-append">
-                      <button class="btn btn-block action-btn p-3" ">
-                    <i class="fas fa-plus-square pr-3"></i>Delete Contact
+                      <button class="btn btn-block action-btn p-2 ">
+                    <i class="fas fa-minus-square pr-3"></i>Delete Contact
                 </button>
                     </div>
                     </div>
                   </form>
               
           </div>
+        </div>
         
-          
-            <div class="box">
+          <div class="col-md-6 col-lg-4 offset-lg-0 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box ">
              <form action="delete-spam.php" method="get">
                   <div class="input-group md-form form-md form-2 pl-0">
                     <input class="form-control my-0 py-1" name="contact" type="text" placeholder="Enter spam number" aria-label="Delete">
                     <div class="input-group-append">
-                      <button class="btn btn-block action-btn p-3" ">
-                    <i class="fas fa-plus-square pr-3"></i>Remove spam
+                      <button class="btn btn-block action-btn p-2" ">
+                    <i class="fas fa-minus-square pr-3"></i>Remove spam
                 </button>
                     </div>
                     </div>
                   </form>
           </div>
+        </div>
+
        
 
           
+
+          <div class="col-md-6 col-lg-4 offset-lg-0 wow bounceInUp" data-wow-duration="1.4s">
             <div class="box">
-             <button class="btn btn-block action-btn p-3" onclick="location.href='view_address.php'">
+            
+              <button class="btn btn-block action-btn p-2" onclick="location.href='address.php'">
+                <i class="fas fa-plus-square pr-3"></i> Add address detail
+              </button>
+            </div>
+          </div>
+        
+        
+
+          <div class="col-md-6 col-lg-4 offset-lg-0 wow bounceInUp" data-wow-duration="1.4s">
+
+            <div class="box">
+              <button class="btn btn-block action-btn p-2" onclick="location.href='view_contactlist.php'">
+                <i class="fas fa-book pr-3"></i> View Contact Database
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 offset-lg-0 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <button class="btn btn-block action-btn p-2" onclick="location.href='view_spamlist.php'">
+                <i class="fas fa-book pr-3"></i> View Spam Database
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 offset-lg-0 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <button class="btn btn-block action-btn p-2" onclick="location.href='view_adminlist.php'">
+                    <i class="far fa-book pr-3"></i> View Users database
+                </button>
+          </div>
+        </div>
+          <div class="col-md-6 col-lg-4 offset-lg-0 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <button class="btn btn-block action-btn p-2" onclick="location.href='feedback_view.php'">
+                    <i class="fas fa-book pr-3"></i> View feedbacks
+                </button>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 offset-lg-0 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <button class="btn btn-block action-btn p-2" onclick="location.href='log.php'">
+                <i class="fas fa-book pr-3"></i> View Logs database
+              </button>
+            </div>
+          </div>
+          
+        <div class="col-md-6 col-lg-4 offset-lg-0 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+             <button class="btn btn-block action-btn p-2" onclick="location.href='view_address.php'">
                 <i class="fas fa-book pr-3"></i> View Addresss
               </button>
 
           
         </div>
-          
-            <div class="box">
-            
-              <button class="btn btn-block action-btn p-3" onclick="location.href='address.php'">
-                <i class="fas fa-plus-square pr-3"></i> Add address detail
-              </button>
-            </div>
-        
-
-          
-
-            <div class="box">
-              <button class="btn btn-block action-btn p-3" onclick="location.href='view_contactlist.php'">
-                <i class="fas fa-search pr-3"></i> View Contact Database
-              </button>
-            </div>
-            <div class="box">
-              <button class="btn btn-block action-btn p-3" onclick="location.href='view_spamlist.php'">
-                <i class="fas fa-search pr-3"></i> View Spam Database
-              </button>
-            </div>
-            <div class="box">
-              <button class="btn btn-block action-btn p-3" onclick="location.href='feedback_view.php'">
-                    <i class="fas fa-search pr-3"></i> View feedbacks
-                </button>
-            </div>
-            <div class="box">
-              <button class="btn btn-block action-btn p-3" onclick="location.href='log.php'">
-                <i class="fas fa-search pr-3"></i> View Recently added contact/spam/user
-              </button>
-            </div>
-            <div class="box">
-              <button class="btn btn-block action-btn p-3" onclick="location.href='view_adminlist.php'">
-                    <i class="far fa-plus-square pr-3"></i> View Users database
-                </button>
-          </div>
+      </div>
         </div>
         
          

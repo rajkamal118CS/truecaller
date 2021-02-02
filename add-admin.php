@@ -55,7 +55,7 @@ session_start();
 
                 <div class="shadow-lg bg-white mt-4">
                     <div class="col form-header text-center p-3">
-                        Add New Admin
+                        Add New User
                     </div>
                     <form action="add-admin-action.php" method="get">
                         <div class="form-group mx-4 mt-4">

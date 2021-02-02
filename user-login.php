@@ -19,14 +19,7 @@ session_start();
 		$usernumber = filter_input(INPUT_GET,'adminnumber');
 		$userpass = md5(filter_input(INPUT_GET,'userpass'));
         $type = filter_input(INPUT_GET,'type');
-        // echo "$usernumber";
-		
-		// if($usernumber=="raj" && $userpass=="kamal")
-		// {
-  //           $_SESSION["userid"] = $usernumber;
-  //           header("Location: dashboard.php");
-			
-		// }else{
+       
             $servername = "localhost";
             $username = "root";
             $password = "";

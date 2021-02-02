@@ -37,7 +37,7 @@ session_start();
 
                 <div class="mt-2">
                     <div class="text-center p-3">
-                        <h3 class="theme-color">Local Contact</h3>
+                        <h3 class="theme-color">Log table</h3>
                     </div>
                 </div>
 
